@@ -1,0 +1,67 @@
+:root {
+  --white: #ddd;
+  --grey: #bbb;
+  --dark-grey: #888;
+  --black: #111;
+}
+@font-face {
+  font-family: customFont;
+  src: url(./fonts/JetBrainsMono-Medium.ttf);
+}
+* {
+  font-family: customFont;
+}
+html,
+body {
+  background: var(--white);
+  padding: 0px;
+  margin: 0px;
+}
+header {
+  outline: 3px dotted var(--black);
+}
+h1 {
+  margin: 0;
+}
+.header-container {
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container {
+  padding: 1rem 0rem 1rem 1rem;
+  display: flex;
+  /* justify-content: center; */
+}
+.books-container {
+  margin: 0rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  border: solid var(--dark-grey);
+  border-radius: 0.4rem;
+  width: 100vw;
+  height: 80vh;
+  /*  */
+  display: grid;
+}
+.card {
+  margin: 1rem;
+  border: solid var(--black);
+  border-radius: 0.4rem;
+  background: var(--grey);
+  width: 10rem;
+  height: 14rem;
+}
+.button:hover {
+  filter: brightness(80%);
+  border: none;
+}
+.button {
+  background: var(--grey);
+  width: 8rem;
+  height: 3rem;
+  border: solid var(--black);
+  border-radius: 0.4rem;
+}
