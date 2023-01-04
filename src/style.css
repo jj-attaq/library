@@ -19,7 +19,7 @@ body {
 }
 .main-container {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 7fr;
+  grid-template: 6rem 1fr 6rem/ 1fr 7fr;
 }
 header,
 .body-container,
@@ -35,6 +35,7 @@ footer {
   display: grid;
   grid-auto-rows: 4rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-areas: "title author pages readStatus"; */
 }
 .book-title,
 .book-author,
@@ -48,18 +49,22 @@ footer {
 .book-title {
   grid-column-start: 1;
   grid-column-end: 2;
+  /* grid-area: title; */
 }
 .book-author {
   grid-column-start: 2;
   grid-column-end: 3;
+  /* grid-area: author; */
 }
 .book-pages {
   grid-column-start: 3;
   grid-column-end: 4;
+  /* grid-area: pages; */
 }
 .book-readStatus {
   grid-column-start: 4;
   grid-column-end: 5;
+  /* grid-area: readStatus; */
 }
 .button-container {
   grid-column-start: 1;
@@ -77,4 +82,9 @@ footer {
   height: 3rem;
   border: solid var(--dark-grey);
   border-radius: 0.4rem;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
