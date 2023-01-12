@@ -89,7 +89,9 @@ footer {
   border-radius: 0.4rem;
 }
 .bookRemoval {
-  
+}
+.readBox {
+  margin: 0.5rem;
 }
 footer {
   display: flex;
