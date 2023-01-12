@@ -35,7 +35,7 @@ footer {
 .books-container {
   display: grid;
   grid-auto-rows: 4rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr 32px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.25fr;
   /* grid-template-areas: "title author pages readStatus"; */
 }
 .book-title,
@@ -67,6 +67,9 @@ footer {
   grid-column-start: 4;
   grid-column-end: 5;
   /* grid-area: readStatus; */
+}
+.book-removal {
+  margin: 0rem 1rem 0rem 0rem;
 }
 .button-container {
   grid-column-start: 1;
