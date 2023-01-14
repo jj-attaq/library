@@ -14,7 +14,7 @@ function Book(title, author, pages, checkedOrNot) {
 }
 Book.prototype.read = function(readStatus) {
   readStatus = this.checkedOrNot;
-  return readStatus === true ? 'has been read' : 'has not been read yet';
+  return readStatus === true ? 'read' : 'unread';
 }
 Book.prototype.reference = function() {
   return myLibrary.indexOf(this);
@@ -71,14 +71,16 @@ function addModal() {
 }
 function removeBook() {
   const bookRef = document.querySelector('#remove-book')
-  console.log(bookRef);
 
   bookRef.addEventListener('click', () => {
     const title = document.querySelector('.book-title');
-    return title.remove(), author.remove(), pages.remove(), read.remove(), remove.remove();
+    const author = document.querySelector('.book-author');
+    const pages = document.querySelector('.book-pages');
+    const readStatus = document.querySelector('.book-readStatus');
+    const removal = document.querySelector('.book-removal');
+    return title.remove(), author.remove(), pages.remove(), readStatus.remove(), removal.remove();
   })
 }
-removeBook();
 function displayBook(book) {
   const booksContainer = document.querySelector('.books-container');
   const para = document.createElement('p');
@@ -122,5 +124,5 @@ function displayBook(book) {
 
   booksContainer.append(title, author, pages, read, remove);
 
-  return  title.append(book.title), author.append(book.author), pages.append(book.pages), read.append(book.read(), readBox), remove.append(removeButton);
+  return  title.append(book.title), author.append(book.author), pages.append(book.pages), read.append(book.read(), readBox), remove.append(removeButton), removeBook();
 }
